@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abishek U D - Portfolio</title>
+    <!-- Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-slate-50 text-slate-900;
+        }
+
+        .typing-effect::after {
+            content: '|';
+            animation: blink-caret .75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: rgb(251, 146, 60) }
+        }
+
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fb923c;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <!-- Header Navigation (Sticky) -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg py-4 transition-all duration-300">
+        <div class="container mx-auto px-6 lg:px-8 flex items-center justify-between">
+            <a href="#home" class="text-xl font-bold text-slate-900">Abishek U D</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-slate-700 hover:text-orange-500 transition-colors duration-200">About</a>
+                <a href="#projects" class="text-slate-700 hover:text-orange-500 transition-colors duration-200">Projects</a>
+                <a href="#contact" class="text-slate-700 hover:text-orange-500 transition-colors duration-200">Contact</a>
+                <a href="#" class="bg-orange-500 text-white font-medium py-2 px-4 rounded-full hover:bg-orange-600 transition-colors duration-200">Download Resume</a>
+            </nav>
+            <!-- Mobile Menu button -->
+            <button class="md:hidden text-slate-700 focus:outline-none">
+                <!-- Hamburger Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center bg-white px-6 lg:px-8">
+            <div class="container mx-auto text-center">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-4 animate-fade-in-up">
+                    <span class="text-orange-500">Full-Stack Developer</span> & Digital Problem Solver
+                </h1>
+                <p class="text-xl sm:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto">
+                    I'm a passionate developer <br class="sm:hidden">
+                    <span id="typing-text" class="typing-effect text-orange-500"></span>
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#projects" class="bg-orange-500 text-white font-medium py-3 px-8 rounded-full shadow-lg hover:bg-orange-600 transition-transform transform hover:-translate-y-1 duration-300">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="bg-slate-200 text-slate-800 font-medium py-3 px-8 rounded-full shadow-lg hover:bg-slate-300 transition-transform transform hover:-translate-y-1 duration-300">
+                        Let's Build Something
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6 lg:px-8 bg-slate-50">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12">The Human Behind the Code</h2>
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-12 space-y-8">
+                    <div class="flex flex-col sm:flex-row items-center sm:space-x-8">
+                        <img src="https://placehold.co/200x200/64748B/FFFFFF?text=Abishek" alt="A professional photo of Abishek U D" class="w-40 h-40 rounded-full object-cover shadow-md mb-6 sm:mb-0">
+                        <div class="text-center sm:text-left">
+                            <h3 class="text-2xl font-semibold mb-2">Meet the Developer</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                Hey there! I'm Abishek U D – a passionate full-stack developer who loves turning wild ideas into pixel-perfect reality. Currently crushing my BTech (Class of 2025), but I've been coding since before it was cool to have "developer" in your bio.
+                                My superpower? Building seamless web experiences that make users go "wow, that just works!" From crafting responsive frontends with React and Vue to architecting robust backends with Python and Django, I speak fluent code in multiple dialects.
+                                When I'm not debugging at 2 AM (okay, maybe I am), you'll find me exploring the latest web technologies, creating digital designs in Illustrator, or helping teams bring their visions to life through clear communication and solid project management.
+                                I believe great software isn't just about clean code – it's about solving real problems for real people. Ready to build something amazing together?
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="my-8 border-slate-200">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-center mb-6">My Technical Toolbox</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                            <!-- Skill 1 -->
+                            <div class="flex flex-col items-center p-4 bg-slate-100 rounded-lg shadow-sm">
+                                <svg class="w-12 h-12 text-blue-500 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                <span class="font-medium">React</span>
+                            </div>
+                            <!-- Skill 2 -->
+                            <div class="flex flex-col items-center p-4 bg-slate-100 rounded-lg shadow-sm">
+                                <svg class="w-12 h-12 text-green-500 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                <span class="font-medium">Python</span>
+                            </div>
+                            <!-- Skill 3 -->
+                            <div class="flex flex-col items-center p-4 bg-slate-100 rounded-lg shadow-sm">
+                                <svg class="w-12 h-12 text-yellow-500 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                <span class="font-medium">JavaScript</span>
+                            </div>
+                            <!-- Skill 4 -->
+                            <div class="flex flex-col items-center p-4 bg-slate-100 rounded-lg shadow-sm">
+                                <svg class="w-12 h-12 text-indigo-500 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                <span class="font-medium">Django</span>
+                            </div>
+                            <!-- Skill 5 -->
+                            <div class="flex flex-col items-center p-4 bg-slate-100 rounded-lg shadow-sm">
+                                <svg class="w-12 h-12 text-red-500 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                <span class="font-medium">SQL</span>
+                            </div>
+                            <!-- Skill 6 -->
+                            <div class="flex flex-col items-center p-4 bg-slate-100 rounded-lg shadow-sm">
+                                <svg class="w-12 h-12 text-gray-500 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                <span class="font-medium">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-6 lg:px-8 bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12">Things I've Built</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-slate-100 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6">
+                        <img src="https://placehold.co/400x250/64748B/FFFFFF?text=Project+1" alt="Placeholder image for Project 1" class="rounded-xl mb-4">
+                        <h3 class="text-2xl font-bold mb-2">Project 1 Title</h3>
+                        <p class="text-slate-600 mb-4">A brief description of Project 1, highlighting the problem it solves and the technologies used. This is a placeholder description.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-slate-300 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">React</span>
+                            <span class="bg-slate-300 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Tailwind</span>
+                            <span class="bg-slate-300 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Firebase</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white bg-orange-500 hover:bg-orange-600 font-medium py-2 px-4 rounded-full">Live Demo</a>
+                            <a href="#" class="text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium py-2 px-4 rounded-full">GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-slate-100 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6">
+                        <img src="https://placehold.co/400x250/64748B/FFFFFF?text=Project+2" alt="Placeholder image for Project 2" class="rounded-xl mb-4">
+                        <h3 class="text-2xl font-bold mb-2">Project 2 Title</h3>
+                        <p class="text-slate-600 mb-4">A brief description of Project 2, showcasing the features and your role in its development. This is a placeholder description.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-slate-300 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Python</span>
+                            <span class="bg-slate-300 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Django</span>
+                            <span class="bg-slate-300 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">PostgreSQL</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white bg-orange-500 hover:bg-orange-600 font-medium py-2 px-4 rounded-full">Live Demo</a>
+                            <a href="#" class="text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium py-2 px-4 rounded-full">GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-slate-100 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6">
+                        <img src="https://placehold.co/400x250/64748B/FFFFFF?text=Project+3" alt="Placeholder image for Project 3" class="rounded-xl mb-4">
+                        <h3 class="text-2xl font-bold mb-2">Project 3 Title</h3>
+                        <p class="text-slate-600 mb-4">A brief description of Project 3, focusing on the unique challenges and solutions. This is a placeholder description.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-slate-300 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Vue.js</span>
+                            <span class="bg-slate-300 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Node.js</span>
+                            <span class="bg-slate-300 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white bg-orange-500 hover:bg-orange-600 font-medium py-2 px-4 rounded-full">Live Demo</a>
+                            <a href="#" class="text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium py-2 px-4 rounded-full">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6 lg:px-8 bg-slate-50">
+            <div class="container mx-auto max-w-2xl">
+                <h2 class="text-4xl font-bold text-center mb-12">Let's Create Together</h2>
+                <div class="bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-700">Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-2">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-2">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-2"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-orange-500 text-white font-medium py-3 px-8 rounded-full shadow-lg hover:bg-orange-600 transition-colors duration-200">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-8">
+                        <p class="text-slate-600 mb-4">Or connect with me directly:</p>
+                        <div class="flex justify-center space-x-6">
+                            <a href="mailto:john@gmail.com" class="text-slate-700 hover:text-orange-500 transition-colors duration-200">
+                                <!-- Email Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 4h.01M21 12v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6m-2 4h18a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z"/></svg>
+                            </a>
+                            <a href="https://github.com/johntester" target="_blank" class="text-slate-700 hover:text-orange-500 transition-colors duration-200">
+                                <!-- GitHub Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.82-.266.82-.596 0-.29-.01-1.055-.015-2.062-3.359.72-4.06-1.61-4.06-1.61-5.467-1.387-1.332-1.636-1.332-1.636-4.436.31-6.726 3.12-6.726 3.12-2.185.34-3.328 1.488-3.328 1.488-2.094.757-3.23 2.15-3.23 2.15-1.928 1.31-3.393.396-3.393.396-.54.34-1.036 1.458-1.036 1.458-2.26.685-3.396 2.052-3.396 2.052-1.127 1.5-2.32 2.766-2.32 2.766-2.585 1.536-4.99 2.582-4.99 2.582-2.378.683-4.22.42-4.22.42-2.924-.047-4.14-2.618-4.14-2.618-2.784-2.067-1.787-3.226-1.787-3.226 2.083-2.093 3.486-.316 3.486-.316 2.858 2.374 4.39 1.446 4.39 1.446 1.954-1.258 2.998-1.724 2.998-1.724 1.432-1.077 2.152-1.616 2.152-1.616 1.637-1.22 2.443-2.016 2.443-2.016.98-.823 1.47-1.91.98-1.91-1.674 1.25-2.5 1.76-2.5 1.76-1.25.938-1.927.938-1.927.938-.456-.05-.838-.135-1.18-.28-1.192-.47-1.993-.97-1.993-.97 1.25-1.17 2.18-2.73 2.18-2.73.473-1.14.9-2.056 1.272-2.748 1.54-.775 2.17-.674 2.17-.674 2.102 1.405 3.16 2.894 3.16 2.894 1.565 1.23 2.392 1.845 2.392 1.845 1.096-.948 1.74-2.348 1.74-2.348 1.066-.667 1.638-.284 1.638-.284 1.953 1.29 2.96 2.965 2.96 2.965 2.302 1.916 2.302 1.916.143 1.43-.223 2.768-.223 2.768-1.763 3.39-3.774 3.39-3.774-3.56-1.425-5.91-.703-5.91-.703z"/></svg>
+                            </a>
+                            <a href="https://linkedin.com/in/johntester" target="_blank" class="text-slate-700 hover:text-orange-500 transition-colors duration-200">
+                                <!-- LinkedIn Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 0H1.77C.79 0 0 .79 0 1.77v20.46C0 23.21.79 24 1.77 24h20.46c.98 0 1.77-.79 1.77-1.77V1.77C24 .79 23.21 0 22.23 0zM7.5 20.5H4V9h3.5v11.5zM5.75 7.5c-1.04 0-1.89-.85-1.89-1.89s.85-1.89 1.89-1.89 1.89.85 1.89 1.89-.85 1.89-1.89 1.89zM20.5 20.5h-3.5v-5.75c0-1.3-.47-2.18-1.5-2.18-1.04 0-1.66.72-1.94 1.41-.1.25-.13.58-.13.91v5.61h-3.5s.05-10.45 0-11.5h3.5v1.65c.5-.78 1.34-1.9 3.09-1.9 2.25 0 3.91 1.46 3.91 4.54V20.5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-900 text-white">
+        <div class="container mx-auto px-6 lg:px-8 text-center">
+            <p>&copy; 2024 Abishek U D. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('header nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Offset for sticky header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Typing Effect
+        const typingTextElement = document.getElementById('typing-text');
+        const phrases = [
+            'crafting web experiences that work.',
+            'building digital magic ✨.',
+            'turning ideas into code.'
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                typingTextElement.textContent = currentPhrase.substring(0, charIndex--);
+            } else {
+                typingTextElement.textContent = currentPhrase.substring(0, charIndex++);
+            }
+
+            if (!isDeleting && charIndex > currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(type, 1500); // Pause at end of phrase
+            } else if (isDeleting && charIndex < 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(type, 500); // Pause before next phrase
+            } else {
+                setTimeout(type, isDeleting ? 75 : 150);
+            }
+        }
+
+        window.onload = function() {
+            type();
+        };
+    </script>
+</body>
+</html>
